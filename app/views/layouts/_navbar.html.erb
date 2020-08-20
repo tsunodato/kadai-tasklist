@@ -1,4 +1,8 @@
 <h1><a href ="/">Tasklist</a></h1>
 
-<p><%= link_to 'Sigun up', signup_path %></p>
-<p><a href ="#">Login</a></p>
+<% if logged_in? %>
+  <P>ログイン中</P>
+<% else %>
+  <p><%= link_to 'Sigun up', signup_path %></p>
+  <p><%= link_to 'Log in', login_path %></p>
+<% end %>
